@@ -1,4 +1,6 @@
+
 [
+<<<<<<< HEAD
   {
     "id": 1,
     "name": "Doro Wot",
@@ -92,3 +94,104 @@
     "image": "/images/fresh-juice.jpg"
   }
 ]
+=======
+    {
+        "id": 1,
+        "name": "Doro Wot",
+        "category": "Ethiopian",
+        "price": 240,
+        "cookingTime": 25,
+        "description": "Traditional Ethiopian chicken stew with berbere and boiled egg.",
+        "ingredients": [
+            "Chicken",
+            "Berbere",
+            "Onion",
+            "Garlic",
+            "Egg"
+        ],
+        "status": "Inactive",
+        "image": "/images/doro-wot.webp"
+    },
+    {
+        "id": 2,
+        "name": "Tibs",
+        "category": "Ethiopian",
+        "price": 250,
+        "cookingTime": 15,
+        "description": "Tender pieces of meat sautéed with onion, tomato and Ethiopian spices.",
+        "ingredients": [
+            "Beef",
+            "Onion",
+            "Tomato",
+            "Rosemary",
+            "Spices"
+        ],
+        "status": "Active",
+        "image": "/images/tibs.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Shiro",
+        "category": "Ethiopian",
+        "price": 150,
+        "description": "Smooth and flavorful Ethiopian chickpea stew served with injera.",
+        "ingredients": [
+            "Shiro powder",
+            "Onion",
+            "Garlic",
+            "Berbere",
+            "Oil"
+        ],
+        "status": "Active",
+        "image": "/images/shiro.webp"
+    },
+    {
+        "id": 4,
+        "name": "Margherita Pizza",
+        "category": "Pizza",
+        "price": 350,
+        "cookingTime": 10,
+        "description": "Classic pizza with tomato sauce, mozzarella and fresh basil.",
+        "ingredients": [
+            "Pizza dough",
+            "Tomato sauce",
+            "Mozzarella",
+            "Basil"
+        ],
+        "status": "Active",
+        "image": "/images/pizza.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Cheese Burger",
+        "category": "Burgers",
+        "price": 300,
+        "cookingTime": 15,
+        "description": "Juicy beef burger with cheese, lettuce, tomato and special sauce.",
+        "ingredients": [
+            "Beef",
+            "Cheese",
+            "Lettuce",
+            "Tomato",
+            "Burger bun"
+        ],
+        "status": "Active",
+        "image": "/images/cheesBurger.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Fresh Juice",
+        "category": "Drinks",
+        "price": 100,
+        "description": "Freshly prepared seasonal fruit juice.",
+        "ingredients": [
+            "Fresh fruit",
+            "Water",
+            "Ice"
+        ],
+        "status": "Active",
+        "image": "/images/fresh-juice.jpg"
+    }
+]
+
+>>>>>>> 67696d8 (Add inactive dish status)

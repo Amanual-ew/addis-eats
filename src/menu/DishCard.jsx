@@ -18,20 +18,18 @@ function DishCard({ dish }) {
         dispatch: favoriteDispatch
     } = useContext(FavoriteContext);
 
-
+    // Check if the dish is in favorites
     const isFavorite = favoriteState.favorites.some(
         (item) => item.id === dish.id
     );
 
-
     // Check if admin deactivated the dish
     const isInactive = dish.status === "Inactive";
-
 
     function handleAdd(e) {
         e.stopPropagation();
 
-        // Don't allow inactive dishes
+        // Do not allow inactive dishes
         if (isInactive) return;
 
         addItem(dish);
@@ -43,7 +41,6 @@ function DishCard({ dish }) {
         }, 2000);
     }
 
-
     function handleFavorite(e) {
         e.stopPropagation();
 
@@ -53,26 +50,29 @@ function DishCard({ dish }) {
         });
     }
 
+    function handleCardClick() {
+        navigate(`/menu/${dish.name}`);
+    }
 
     return (
         <article
             className={`dish-card clickable-card ${
                 isInactive ? "inactive-dish-card" : ""
             }`}
-            onClick={() => navigate(`/menu/${dish.name}`)}
+            onClick={handleCardClick}
         >
 
             {/* IMAGE */}
             <div className="dish-image-container">
 
                 <img
-                    src={dish.image || null}
+                    src={dish.image}
                     alt={dish.name}
                 />
 
-
                 {/* FAVORITE */}
                 <button
+                    type="button"
                     className="favorite-button"
                     onClick={handleFavorite}
                     aria-label={
@@ -84,7 +84,6 @@ function DishCard({ dish }) {
                     {isFavorite ? "❤️" : "🤍"}
                 </button>
 
-
                 {/* SOLD OUT */}
                 {isInactive && (
                     <div className="sold-out-banner">
@@ -93,7 +92,6 @@ function DishCard({ dish }) {
                 )}
 
             </div>
-
 
             {/* CONTENT */}
             <div className="dish-card-content">
@@ -106,9 +104,9 @@ function DishCard({ dish }) {
                     {dish.price} ETB
                 </strong>
 
-
                 {/* ADD TO CART */}
                 <button
+                    type="button"
                     onClick={handleAdd}
                     disabled={isInactive}
                     className={
@@ -131,3 +129,4 @@ function DishCard({ dish }) {
 }
 
 export default DishCard;
+
