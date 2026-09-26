@@ -33,13 +33,10 @@ function Menu() {
 
 
         setMenuDishes(
-            savedMenu
-                ? JSON.parse(savedMenu)
-                : dishes.map(dish => ({
-                    ...dish,
-                    status: "Active"
-                }))
-        );
+    savedMenu
+        ? JSON.parse(savedMenu)
+        : dishes
+);
 
     }, [dishes]);
 
